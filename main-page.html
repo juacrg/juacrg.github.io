@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JU Astrophysics and Cosmology Research Group</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .table-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Space between cells */
+        }
+
+        /* General Highlight Container (applies to both visual highlights and profile sections) */
+        .highlight-container {
+            display: grid;
+            grid-template-columns: auto auto; /* Allow content to adjust freely */
+            gap: 20px; /* Space between text and image */
+            margin: 20px 0;
+            padding-left: 15px; 
+            /* Align the image with the left margin */
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            text-align: justify;
+        }
+
+        /* Visual Highlights (Figures) */
+        .highlight-container figure {
+            margin: 0; /* Remove default margins */
+            padding-left: 0; /* Ensure the image is aligned with the container's left margin */
+        }
+
+        .highlight-container img {
+            height: auto; /* Do not set a fixed height */
+            max-width: 100%; /* Ensure responsiveness */
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Research Team Profile */
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-container figure img {
+            width: 150px; /* Fixed size for profile photos */
+            height: auto;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: justify; /* Justify text */
+        }
+    </style>
+</head>
+<body>
+
+<div class="highlight-container">
+    <p>
+        Our research group focuses on computational approaches to analyzing large astrophysical datasets, with key research areas including Gravitational Lensing, General Theory of Relativity, Cosmic Structures, Ray-tracing Methodology, Dark Matter, and Dark Energy. Additionally, we implement advanced Machine Learning techniques to enhance the analysis and interpretation of these extensive datasets.
+    </p>
+</div>
+
+<hr/>
+
+<h2>Research Areas</h2>
+<div class="table-container">
+    <div>
+        <button class="collapsible">General Theory of Relativity</button>
+        <div class="content">
+            <p>
+                The General Theory of Relativity, formulated by Albert Einstein, provides a fundamental framework for understanding gravity as the curvature of spacetime caused by mass and energy. This theory underpins much of modern cosmology and is essential for explaining phenomena such as gravitational waves, lensing and the dynamics of the expanding universe.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <button class="collapsible">Weak Gravitational Lensing</button>
+        <div class="content">
+            <p>
+                Weak gravitational lensing involves the slight distortion of light from distant galaxies as it passes through the gravitational fields of intervening mass distributions, such as galaxy clusters. This phenomenon serves as a powerful tool for probing the distribution of dark matter and mapping the large-scale structure of the universe.
+            </p>
+        </div>
+    </div>
+    <div>
+        <button class="collapsible">Doppler Lensing</button>
+        <div class="content">
+            <p>
+                Doppler lensing refers to the modulation of an object's brightness due to its relative motion with respect to the observer. This effect, though subtle, can be used to investigate galaxy peculiar velocities and contributes to our understanding of cosmic velocity fields and the large-scale motion of matter.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <button class="collapsible">Dark Matter & Dark Energy</button>
+        <div class="content">
+            <p>
+                Dark matter, comprising 85% of the universe's matter, is invisible and doesn't interact with light, yet is essential for forming galaxies and clusters. 
+            </p>
+            <p>
+                Dark energy, making up 68% of the universe, drives its accelerated expansion, remaining one of cosmology's greatest mysteries.
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <button class="collapsible">Cosmic Structures</button>
+        <div class="content">
+            <p>
+                Cosmic structures include galaxies, clusters, filaments, and voids, forming the cosmic web. They arise from the interaction of gravity, dark matter, and dark energy. Studying these helps explain the universe's formation and evolution.
+            </p>
+            <p><strong>Halos:</strong> Dark matter regions surrounding galaxies and clusters, vital for understanding galaxy dynamics and dark matter distribution.</p>
+            <p><strong>Voids:</strong> Large, empty regions with few galaxies, offering insights into dark energy and large-scale cosmic behavior.</p>
+        </div>        
+    </div>
+    <div>
+        <button class="collapsible">Machine Learning Techniques</button>
+        <div class="content">
+            <p>  
+                Machine learning techniques have become increasingly important in astrophysical research, particularly for analyzing large and complex datasets. These methods are applied to tasks such as object classification, data mining, and simulation analysis, providing novel insights into the underlying structure of the universe and improving the efficiency of cosmological data processing.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<hr/>
+
+<h2>A Few Visual Highlights</h2>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            This figure shows the full sky weak-lensing convergence map. In our inhomogeneous universe, the view of an observer will be influenced by the location and local environment. Here we analyse the one-point probability distribution functions and angular power spectra of weak-lensing (WL) convergence and magnification numerically to investigate the influence of our local environment on WL statistics in relativistic N-body simulations. Our findings demonstrate how cosmological observations of large-scale structure through WL can be impacted by the locality of the observer.
+            <a href="https://academic.oup.com/mnras/article-abstract/509/2/3004/6414000?redirectedFrom=fulltext" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src="images/1_convergence_wl_lensing.webp" width="80%" />
+    </figure>
+</div>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            This figure shows the variation of Doppler convergence by stacking cosmic voids having radii 20-25 Mpc/h. Probing the mass distribution of the universe requires various approaches, including weak gravitational lensing that subtly modifies the shape of distant sources, and Doppler lensing that changes the apparent size and magnitude of objects due to peculiar velocities. In this work, we adopt both gravitational and Doppler lensing effects to study the underlying matter distribution in and around cosmic voids/halos. The results of this paper show that the most optimal strategy that combines both gravitational and Doppler lensing effects to map the mass distribution should focus on the redshift range z≈0.3-0.4.
+            <a href="https://academic.oup.com/mnras/article-abstract/509/4/5142/6426187?redirectedFrom=PDF" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src="images/2_doppler_convergence.webp" width="100%" />
+    </figure>
+</div>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            What's large and blue and can wrap itself around an entire galaxy? A gravitational lens mirage. Pictured above, the gravity of a luminous red galaxy (LRG) has gravitationally distorted the light from a much more distant blue galaxy. More typically, such light bending results in two discernible images of the distant galaxy, but here the lens alignment is so precise that the background galaxy is distorted into a horseshoe -- a nearly complete ring. Since such a lensing effect was generally predicted in some detail by Albert Einstein over 70 years ago, rings like this are now known as Einstein Rings. Although LRG 3-757 was discovered in 2007 in data from the Sloan Digital Sky Survey (SDSS), the image shown above is a follow-up observation taken with the Hubble Space Telescope's Wide Field Camera 3. Strong gravitational lenses like LRG 3-757 are more than oddities -- their multiple properties allow astronomers to determine the mass and dark matter content of the foreground galaxy lenses. 
+            <a href="http://apod.nasa.gov/apod/ap111221.html" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src ="images/3_A_Horseshoe_Einstein_Ring_from_Hubble.jpeg" width="90%"  />
+    </figure>
+</div>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            The effects of foreground galaxy cluster mass on background galaxy shapes. The upper left panel shows (projected onto the plane of the sky) the shapes of cluster members (in yellow) and background galaxies (in white), ignoring the effects of weak lensing. The lower right panel shows this same scenario, but includes the effects of lensing. The middle panel shows a 3-d representation of the positions of cluster and source galaxies, relative to the observer. Note that the background galaxies appear stretched tangentially around the cluster.
+            <a href="http://apod.nasa.gov/apod/ap111221.html" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src ="images/4_Gravitational-lensing-3d.png" width="90%"  />
+    </figure>
+</div>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            Estimated matter and energy distribution in the Universe according to Planck probe measurements, March 2013. 
+            <a href="http://apod.nasa.gov/apod/ap111221.html" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src ="images/5_DMPie_2013.png" width="90%"  />
+    </figure>
+</div>
+
+<div class="highlight-container">
+    <div class="highlight-content">
+        <p>
+            This map of dark matter in the Universe was obtained from data from the KiDS survey, using the VLT Survey Telescope at ESO’s Paranal Observatory in Chile. It reveals an expansive web of dense (light) and empty (dark) regions. This image is one out of five patches of the sky observed by KiDS. Here the invisible dark matter is seen rendered in pink, covering an area of sky around 420 times the size of the full moon. This image reconstruction was made by analysing the light collected from over three million distant galaxies more than 6 billion light-years away. The observed galaxy images were warped by the gravitational pull of dark matter as the light travelled through the Universe. Some small dark regions, with sharp boundaries, appear in this image. They are the locations of bright stars and other nearby objects that get in the way of the observations of more distant galaxies and are hence masked out in these maps as no weak-lensing signal can be measured in these areas.
+            <a href="http://apod.nasa.gov/apod/ap111221.html" target="_blank">(Read more)</a>
+        </p>
+    </div>
+    <figure>
+        <img src ="images/6_Dark_matter_map_of_KiDS_survey_region_(region_G12).jpg" width="90%"  />
+    </figure>
+</div>
+
+<hr/>
+
+<h2>Research Team</h2>
+
+<h3>Principal Investigator</h3>
+    <div class="profile-container">
+        <figure>
+            <img src="images/rasel-hossen.jpg" alt="Dr. Md. Rasel Hossen" />
+        </figure>
+        <div class="highlight-content">
+        <h3>Dr. Md. Rasel Hossen</h3>
+        <p>Assistant Professor, Department of Physics, Jahangirnagar University</p>
+        <ul>
+            <li><b>Website:</b> <a href="https://www.juniv.edu/teachers/dr-md-rasel-hossen" target="_blank">https://www.juniv.edu/teachers/dr-md-rasel-hossen</a> </li>
+            <li> <b>Email:</b> <a href="mailto:rasel.hossen@juniv.edu">rasel.hossen@juniv.edu</a> </li>
+        </ul>
+        </div> 
+    </div>
+
+<h3>Research Assistant</h3>
+    <div class="profile-container">
+        <figure>
+            <img src="images/mubtasim-fuad-2024.jpg" alt="Md. Mubtasim Fuad" />
+        </figure>
+        <div class="highlight-content">
+            <h3>Md. Mubtasim Fuad</h3>
+            <p><b>Projects </b> (under UGC-fund, 2024-Present)</p>
+            <ul>
+                <li>Analysis of the Relativistic Cosmological Simulation Approaches for Investigating Doppler Lensing Phenomena</li>
+                <li>Measurement of Gravitational Lensing Signals in the Framework of General Theory of Relativity: A Step Towards Precision Cosmology</li>
+            </ul>
+            <button class="collapsible"><b>Other Info</b></button>
+            <div class="content">
+            <p><b>Academic Info </b></p>
+            <ul>
+                <li><b>Degree:</b> Master of Science (Thesis) – Theoretical Physics<br />
+                    <b>Specialization:</b> High Energy Physics<br />
+                    <b>Institute:</b> Department of Theoretical Physics, University of Dhaka, Bangladesh<br />
+                    <b>Session:</b> 2021-22</li>
+                <li><b>Degree:</b> Bachelor of Science (Honors) – Physics<br />
+                    <b>Institute:</b> Department of Physics, Jahangirnagar University, Bangladesh<br />
+                    <b>Session:</b> 2016-17</li>
+            </ul>
+            <p><b>Contact Info </b></p>
+            <ul>
+                <li> <b>Email:</b> <a href="mailto:mubtasim.stu2016@juniv.edu">mubtasim.stu2016@juniv.edu</a> </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+<hr/>
+
+<script>
+    const collapsible = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < collapsible.length; i++) {
+        collapsible[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
