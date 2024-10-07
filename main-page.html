@@ -9,7 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
+            background-color: #fff;
+            /* background-color: #f8f8f8; */
         }
 
         .table-container {
@@ -29,7 +30,8 @@
             background-color: #fff;
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
             align-items: center;
             text-align: justify;
         }
@@ -59,7 +61,8 @@
             background-color: #fff;
             padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
         }
 
         .profile-container figure img {
@@ -75,15 +78,22 @@
             cursor: pointer;
             padding: 10px;
             width: 100%;
-            border: none;
+            border: 2px solid #6884ff;
+            border-radius: 5px;
             text-align: left;
             outline: none;
             font-size: 16px;
             transition: 0.4s;
         }
 
-        .active, .collapsible:hover {
+        .collapsible:hover {
             background-color: #ccc;
+        }
+
+        /* When hovering over either .collapsible or .content, display the content */
+        .collapsible:hover + .content,
+        .content:hover {
+            display: block;
         }
 
         .content {
@@ -91,9 +101,10 @@
             display: none;
             overflow: hidden;
             background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             border-radius: 5px;
             text-align: justify; /* Justify paragraph text by default */
+            transition: max-height 0.4s ease-out;
         }
 
         .content ul, 
@@ -306,8 +317,6 @@
             </div>
         </div>
     </div>
-
-<hr/>
 
 <script>
     const collapsible = document.getElementsByClassName("collapsible");
