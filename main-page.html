@@ -82,21 +82,22 @@
             border-radius: 5px;
             text-align: left;
             font-size: 16px;
-            transition: background-color 0.4s;
-            /* user-select: none;  */
-            /* Prevents text selection on click */
+            transition: background-color 0.4s, border-color 0.4s;
+            user-select: none;
         }
 
-        .collapsible:hover {
-            background-color: #ccc;
+        /* Hover state */
+        .collapsible:hover, .content:hover {
+            background-color: #e0e0e0;
         }
 
-        /* When hovering over .collapsible or .content, keep the content unfolded */
-        .collapsible:hover + .content,
-        .content:hover {
-            display: block;
+        /* Clicked/Active state */
+        .collapsible.active {
+            background-color: #ccc;  /* Make it darker to show it's open */
+            border-color: #333;
         }
 
+        /* Initially hide the content */
         .content {
             padding: 0 18px;
             display: none;
@@ -104,13 +105,19 @@
             background-color: #f9f9f9;
             border: 2px solid #ddd;
             border-radius: 5px;
-            text-align: justify; /* Justify paragraph text by default */
+            text-align: justify;
             transition: max-height 0.4s ease-out;
         }
 
-        /* Disable pointer events on the collapsible element to prevent clicks affecting it */
-        .collapsible:active {
-            pointer-events: none;
+        /* Hovering over collapsible or content shows the content */
+        .collapsible:hover + .content,
+        .content:hover {
+            display: block;
+        }
+
+        /* When the content is manually expanded via click, allow it to stay open */
+        .content.show {
+            display: block !important;
         }
 
         .content ul, 
@@ -324,20 +331,21 @@
         </div>
     </div>
 
-<script>
-    const collapsible = document.getElementsByClassName("collapsible");
-    for (let i = 0; i < collapsible.length; i++) {
-        collapsible[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var collapsibles = document.querySelectorAll(".collapsible");
+
+            collapsibles.forEach(function(collapsible) {
+                var content = collapsible.nextElementSibling;
+
+                // Toggle content and add active class on click
+                collapsible.addEventListener("click", function() {
+                    content.classList.toggle("show");
+                    collapsible.classList.toggle("active");  // Add or remove active class for visual feedback
+                });
+            });
         });
-    }
-</script>
+    </script>
 
 </body>
 </html>
