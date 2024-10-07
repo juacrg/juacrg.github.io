@@ -81,16 +81,17 @@
             border: 2px solid #6884ff;
             border-radius: 5px;
             text-align: left;
-            outline: none;
             font-size: 16px;
-            transition: 0.4s;
+            transition: background-color 0.4s;
+            /* user-select: none;  */
+            /* Prevents text selection on click */
         }
 
         .collapsible:hover {
             background-color: #ccc;
         }
 
-        /* When hovering over either .collapsible or .content, display the content */
+        /* When hovering over .collapsible or .content, keep the content unfolded */
         .collapsible:hover + .content,
         .content:hover {
             display: block;
@@ -105,6 +106,11 @@
             border-radius: 5px;
             text-align: justify; /* Justify paragraph text by default */
             transition: max-height 0.4s ease-out;
+        }
+
+        /* Disable pointer events on the collapsible element to prevent clicks affecting it */
+        .collapsible:active {
+            pointer-events: none;
         }
 
         .content ul, 
